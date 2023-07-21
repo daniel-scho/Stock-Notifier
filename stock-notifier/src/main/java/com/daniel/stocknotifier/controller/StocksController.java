@@ -1,24 +1,25 @@
 package com.daniel.stocknotifier.controller;
 
+import com.daniel.stocknotifier.entity.Stock;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/stocks")
 public class StocksController {
 
-    @GetMapping("/hallo1")
-    public String helloWorld() {
-        return "hallo wie gehts";
+    @GetMapping("/{stockId}")
+    public String getStock(@PathVariable Integer stockId) {
+        return "get stock: " + stockId;
     }
 
-    @GetMapping("hallo2")
-    public String helloWorld1() {
-        return "hallo das ist api/hallo";
+    @GetMapping("/{stockId}/{userId}")
+    public String getStock1(@PathVariable Integer stockId, @PathVariable Integer userId) {
+        return "get stockId: " + stockId + "userId: " + userId;
     }
 
     @PostMapping("add")
-    public String addStock() {
-        return "stocks added";
+    public String addStock(@RequestBody Stock stock) {
+        return stock.toString();
     }
 
     @PutMapping("update")
