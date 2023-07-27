@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+test:
+  api_key: "hallo-wie-key"
+
+logging:
+  level:
+    root: INFO
+    com.daniel.stocknotifier.services.StocksService: INFO
+  file:
+    name: logs/myapplication.log
+    max-size: 10MB
+    max-histroy: 10

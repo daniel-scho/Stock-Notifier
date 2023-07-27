@@ -21,7 +21,7 @@ public class StocksController {
     }
 
     @GetMapping("/{stockId}/{userId}")
-    public String getStock1(@PathVariable Integer stockId, @PathVariable Integer userId) {
+    public String getAllStocks(@PathVariable Integer stockId, @PathVariable Integer userId) {
         return "get stockId: " + stockId + "userId: " + userId;
     }
 

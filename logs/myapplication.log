@@ -1,0 +1,112 @@
+2023-07-27T12:57:52.794+02:00  INFO 49472 --- [main] c.d.s.StockNotifierApplication           : Starting StockNotifierApplication using Java 20 with PID 49472 (C:\Users\Danie\Documents\Kurse\Spring Boot\stock-notifier\stock-notifier\target\classes started by Danie in C:\Users\Danie\Documents\Kurse\Spring Boot\stock-notifier)
+2023-07-27T12:57:52.805+02:00  INFO 49472 --- [main] c.d.s.StockNotifierApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-07-27T12:57:54.309+02:00  INFO 49472 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2023-07-27T12:57:54.326+02:00  INFO 49472 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-27T12:57:54.327+02:00  INFO 49472 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-27T12:57:54.425+02:00  INFO 49472 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-27T12:57:54.425+02:00  INFO 49472 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1555 ms
+2023-07-27T12:57:54.778+02:00  INFO 49472 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-07-27T12:57:54.788+02:00  INFO 49472 --- [main] c.d.s.StockNotifierApplication           : Started StockNotifierApplication in 2.528 seconds (process running for 2.896)
+2023-07-27T12:58:33.150+02:00  INFO 25696 --- [main] c.d.s.StockNotifierApplication           : Starting StockNotifierApplication using Java 20 with PID 25696 (C:\Users\Danie\Documents\Kurse\Spring Boot\stock-notifier\stock-notifier\target\classes started by Danie in C:\Users\Danie\Documents\Kurse\Spring Boot\stock-notifier)
+2023-07-27T12:58:33.155+02:00  INFO 25696 --- [main] c.d.s.StockNotifierApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-07-27T12:58:33.993+02:00  INFO 25696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-27T12:58:34.002+02:00  INFO 25696 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-27T12:58:34.002+02:00  INFO 25696 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-27T12:58:34.069+02:00  INFO 25696 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-27T12:58:34.069+02:00  INFO 25696 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 860 ms
+2023-07-27T12:58:34.324+02:00  INFO 25696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-27T12:58:34.330+02:00  INFO 25696 --- [main] c.d.s.StockNotifierApplication           : Started StockNotifierApplication in 1.608 seconds (process running for 1.89)
+2023-07-27T12:58:36.054+02:00  INFO 25696 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-27T12:58:36.054+02:00  INFO 25696 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-27T12:58:36.055+02:00  INFO 25696 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-27T12:58:36.110+02:00  WARN 25696 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('n' (code 110)): was expecting double-quote to start field name]
+2023-07-27T12:59:11.636+02:00  WARN 25696 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Invalid numeric value: Leading zeroes not allowed]
+2023-07-27T12:59:28.372+02:00  WARN 25696 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Invalid numeric value: Leading zeroes not allowed]
+2023-07-27T13:00:17.993+02:00  WARN 25696 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Invalid numeric value: Leading zeroes not allowed]
+2023-07-27T13:03:07.218+02:00  WARN 25696 --- [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2023-07-27T13:03:28.294+02:00  INFO 38696 --- [main] c.d.s.StockNotifierApplication           : Starting StockNotifierApplication using Java 20 with PID 38696 (C:\Users\Danie\Documents\Kurse\Spring Boot\stock-notifier\stock-notifier\target\classes started by Danie in C:\Users\Danie\Documents\Kurse\Spring Boot\stock-notifier)
+2023-07-27T13:03:28.299+02:00  INFO 38696 --- [main] c.d.s.StockNotifierApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-07-27T13:03:29.094+02:00  INFO 38696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-27T13:03:29.104+02:00  INFO 38696 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-27T13:03:29.105+02:00  INFO 38696 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-27T13:03:29.180+02:00  INFO 38696 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-27T13:03:29.181+02:00  INFO 38696 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 834 ms
+2023-07-27T13:03:29.464+02:00  INFO 38696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-27T13:03:29.471+02:00  INFO 38696 --- [main] c.d.s.StockNotifierApplication           : Started StockNotifierApplication in 1.562 seconds (process running for 1.838)
+2023-07-27T13:03:30.403+02:00  INFO 38696 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-27T13:03:30.403+02:00  INFO 38696 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-27T13:03:30.404+02:00  INFO 38696 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-27T13:03:30.473+02:00  WARN 38696 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2023-07-27T13:04:30.356+02:00  INFO 38916 --- [main] c.d.s.StockNotifierApplication           : Starting StockNotifierApplication using Java 20 with PID 38916 (C:\Users\Danie\Documents\Kurse\Spring Boot\stock-notifier\stock-notifier\target\classes started by Danie in C:\Users\Danie\Documents\Kurse\Spring Boot\stock-notifier)
+2023-07-27T13:04:30.359+02:00  INFO 38916 --- [main] c.d.s.StockNotifierApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-07-27T13:04:31.170+02:00  INFO 38916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-27T13:04:31.177+02:00  INFO 38916 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-27T13:04:31.177+02:00  INFO 38916 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-27T13:04:31.243+02:00  INFO 38916 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-27T13:04:31.244+02:00  INFO 38916 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 837 ms
+2023-07-27T13:04:31.500+02:00  INFO 38916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-27T13:04:31.507+02:00  INFO 38916 --- [main] c.d.s.StockNotifierApplication           : Started StockNotifierApplication in 1.546 seconds (process running for 1.849)
+2023-07-27T13:04:33.530+02:00  INFO 38916 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-27T13:04:33.531+02:00  INFO 38916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-27T13:04:33.532+02:00  INFO 38916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-27T13:06:37.387+02:00  WARN 38916 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.lang.String com.daniel.stocknotifier.controller.StocksController.addStock(com.daniel.stocknotifier.entity.Stock)]
+2023-07-27T13:08:17.131+02:00  INFO 27784 --- [main] c.d.s.StockNotifierApplication           : Starting StockNotifierApplication using Java 20 with PID 27784 (C:\Users\Danie\Documents\Kurse\Spring Boot\stock-notifier\stock-notifier\target\classes started by Danie in C:\Users\Danie\Documents\Kurse\Spring Boot\stock-notifier)
+2023-07-27T13:08:17.136+02:00  INFO 27784 --- [main] c.d.s.StockNotifierApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-07-27T13:08:17.907+02:00  INFO 27784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-27T13:08:17.914+02:00  INFO 27784 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-27T13:08:17.914+02:00  INFO 27784 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-27T13:08:17.982+02:00  INFO 27784 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-27T13:08:17.982+02:00  INFO 27784 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 793 ms
+2023-07-27T13:08:18.242+02:00  INFO 27784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-27T13:08:18.247+02:00  INFO 27784 --- [main] c.d.s.StockNotifierApplication           : Started StockNotifierApplication in 1.519 seconds (process running for 1.809)
+2023-07-27T13:08:20.741+02:00  INFO 27784 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-27T13:08:20.741+02:00  INFO 27784 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-27T13:08:20.743+02:00  INFO 27784 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-07-27T13:29:15.579+02:00  INFO 46176 --- [main] c.d.s.StockNotifierApplication           : Starting StockNotifierApplication using Java 20 with PID 46176 (C:\Users\Danie\Documents\Kurse\Spring Boot\stock-notifier\stock-notifier\target\classes started by Danie in C:\Users\Danie\Documents\Kurse\Spring Boot\stock-notifier)
+2023-07-27T13:29:15.586+02:00  INFO 46176 --- [main] c.d.s.StockNotifierApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-07-27T13:29:16.621+02:00  INFO 46176 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-27T13:29:16.632+02:00  INFO 46176 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-27T13:29:16.633+02:00  INFO 46176 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-27T13:29:16.714+02:00  INFO 46176 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-27T13:29:16.714+02:00  INFO 46176 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1066 ms
+2023-07-27T13:29:17.087+02:00  INFO 46176 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-27T13:29:17.095+02:00  INFO 46176 --- [main] c.d.s.StockNotifierApplication           : Started StockNotifierApplication in 2.154 seconds (process running for 2.532)
+2023-07-27T13:29:19.802+02:00  INFO 46176 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-27T13:29:19.803+02:00  INFO 46176 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-27T13:29:19.803+02:00  INFO 46176 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-07-27T13:30:36.802+02:00  INFO 36088 --- [main] c.d.s.StockNotifierApplication           : Starting StockNotifierApplication using Java 20 with PID 36088 (C:\Users\Danie\Documents\Kurse\Spring Boot\stock-notifier\stock-notifier\target\classes started by Danie in C:\Users\Danie\Documents\Kurse\Spring Boot\stock-notifier)
+2023-07-27T13:30:36.806+02:00  INFO 36088 --- [main] c.d.s.StockNotifierApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-07-27T13:30:37.696+02:00  INFO 36088 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-27T13:30:37.705+02:00  INFO 36088 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-27T13:30:37.706+02:00  INFO 36088 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-27T13:30:37.791+02:00  INFO 36088 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-27T13:30:37.791+02:00  INFO 36088 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 932 ms
+2023-07-27T13:30:38.078+02:00  INFO 36088 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-27T13:30:38.085+02:00  INFO 36088 --- [main] c.d.s.StockNotifierApplication           : Started StockNotifierApplication in 1.733 seconds (process running for 2.065)
+2023-07-27T13:30:41.438+02:00  INFO 36088 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-27T13:30:41.438+02:00  INFO 36088 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-27T13:30:41.439+02:00  INFO 36088 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-27T13:32:18.178+02:00  INFO 37048 --- [main] c.d.s.StockNotifierApplication           : Starting StockNotifierApplication using Java 20 with PID 37048 (C:\Users\Danie\Documents\Kurse\Spring Boot\stock-notifier\stock-notifier\target\classes started by Danie in C:\Users\Danie\Documents\Kurse\Spring Boot\stock-notifier)
+2023-07-27T13:32:18.181+02:00  INFO 37048 --- [main] c.d.s.StockNotifierApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-07-27T13:32:19.289+02:00  INFO 37048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-27T13:32:19.303+02:00  INFO 37048 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-27T13:32:19.304+02:00  INFO 37048 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-27T13:32:19.460+02:00  INFO 37048 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-27T13:32:19.461+02:00  INFO 37048 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1214 ms
+2023-07-27T13:32:19.794+02:00  INFO 37048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-27T13:32:19.801+02:00  INFO 37048 --- [main] c.d.s.StockNotifierApplication           : Started StockNotifierApplication in 2.222 seconds (process running for 2.625)
+2023-07-27T13:32:23.667+02:00  INFO 37048 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-27T13:32:23.667+02:00  INFO 37048 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-27T13:32:23.668+02:00  INFO 37048 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-27T13:42:03.602+02:00  INFO 47836 --- [main] c.d.s.StockNotifierApplication           : Starting StockNotifierApplication using Java 20 with PID 47836 (C:\Users\Danie\Documents\Kurse\Spring Boot\stock-notifier\stock-notifier\target\classes started by Danie in C:\Users\Danie\Documents\Kurse\Spring Boot\stock-notifier)
+2023-07-27T13:42:03.606+02:00  INFO 47836 --- [main] c.d.s.StockNotifierApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-07-27T13:42:04.529+02:00  INFO 47836 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-27T13:42:04.540+02:00  INFO 47836 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-27T13:42:04.540+02:00  INFO 47836 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-27T13:42:04.614+02:00  INFO 47836 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-27T13:42:04.614+02:00  INFO 47836 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 951 ms
+2023-07-27T13:42:04.913+02:00  INFO 47836 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-27T13:42:04.923+02:00  INFO 47836 --- [main] c.d.s.StockNotifierApplication           : Started StockNotifierApplication in 1.783 seconds (process running for 2.13)
+2023-07-27T13:42:18.519+02:00  INFO 47836 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-27T13:42:18.519+02:00  INFO 47836 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-27T13:42:18.520+02:00  INFO 47836 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
