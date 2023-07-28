@@ -9,12 +9,11 @@ import org.springframework.stereotype.Service;
 public class StocksService {
 
     private static final Logger logger = LoggerFactory.getLogger(StocksService.class);
-    @Value("${test.api_key}")
-    public String key;
+
     public String getStock(Integer stockId) {
         logger.warn("Hier wird der logger ausgeführt");
         logger.info("Hier wird der info logger ausgeführt");
 
-        return "get stock: " + stockId + key;
+        return "get stock: " + stockId;
     }
 }
