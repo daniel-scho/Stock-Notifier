@@ -1,19 +1,51 @@
 package com.daniel.stocknotifier.services;
 
+import com.daniel.stocknotifier.entity.Stock;
+import com.daniel.stocknotifier.repository.StockRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Optional;
 
 @Service
 public class StocksService {
-
     private static final Logger logger = LoggerFactory.getLogger(StocksService.class);
 
-    public String getStock(Integer stockId) {
-        logger.warn("Hier wird der logger ausgeführt");
-        logger.info("Hier wird der info logger ausgeführt");
+    private final StockRepository stockRepository;
 
-        return "get stock: " + stockId;
+    public StocksService(StockRepository stockRepository) {
+        this.stockRepository = stockRepository;
+    }
+
+    public List<Stock> getAllStock() {
+        return stockRepository.findAll();
+    }
+    public Optional<Stock> getStock(Integer stockId) {
+        return stockRepository.findById(stockId);
+    }
+
+    public Stock addStock(Stock stock) { return stockRepository.save(stock); }
+
+
+    public Stock updateStock(Integer id, Stock stockDetails) {
+        return stockRepository.findById(id)
+                .map(stock -> {
+                    stock.setCompanyName(stockDetails.getCompanyName());
+                    stock.setTicker(stockDetails.getTicker());
+                    return stockRepository.save(stock);
+                })
+                .orElseThrow(() -> new NoSuchElementException("Element not found with id " + id));
+    }
+
+    public Stock deleteStock(Integer stockId) {
+        Stock stock = stockRepository.findById(stockId)
+                .orElseThrow(() -> new NoSuchElementException("Element not found with id " + stockId));
+        stockRepository.delete(stock);
+
+        return stock;
+
     }
 }
