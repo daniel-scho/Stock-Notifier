@@ -1,6 +1,7 @@
 package com.daniel.stocknotifier.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 
 @Entity
 public class Stock {
@@ -10,6 +11,8 @@ public class Stock {
     @Column(unique = true, nullable = false)
     private String companyName;
     @Column(unique = true, nullable = false)
+    @NotBlank(message = "Ticker can not be null")
+    @Pattern(regexp= "^[A-Z0-9]+$", message = "Ticker must be uppercase")
     private String ticker;
 
 

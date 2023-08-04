@@ -1,6 +1,7 @@
 package com.daniel.stocknotifier.services;
 
 import com.daniel.stocknotifier.entity.Stock;
+import com.daniel.stocknotifier.error.ResourceNotFoundException;
 import com.daniel.stocknotifier.repository.StockRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,12 +38,12 @@ public class StocksService {
                     stock.setTicker(stockDetails.getTicker());
                     return stockRepository.save(stock);
                 })
-                .orElseThrow(() -> new NoSuchElementException("Element not found with id " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Element not found with id " + id));
     }
 
     public Stock deleteStock(Integer stockId) {
         Stock stock = stockRepository.findById(stockId)
-                .orElseThrow(() -> new NoSuchElementException("Element not found with id " + stockId));
+                .orElseThrow(() -> new ResourceNotFoundException("Element not found with id " + stockId));
         stockRepository.delete(stock);
 
         return stock;

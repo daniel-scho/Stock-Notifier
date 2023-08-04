@@ -1,14 +1,15 @@
 package com.daniel.stocknotifier.controller;
 
 import com.daniel.stocknotifier.entity.Stock;
+import com.daniel.stocknotifier.error.ResourceNotFoundException;
 import com.daniel.stocknotifier.services.StocksService;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.List;
-import java.util.NoSuchElementException;
 
 import static org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder.on;
 
@@ -26,7 +27,7 @@ public class StocksController {
     @GetMapping("/{stockId}")
     public ResponseEntity<Stock> getStock(@PathVariable Integer stockId) {
         Stock stock = stocksService.getStock(stockId)
-                .orElseThrow(() -> new NoSuchElementException("Stock was not found with id" + stockId));
+                .orElseThrow(() -> new ResourceNotFoundException("Stock was not found with id " + stockId));
         return ResponseEntity.ok(stock);
     }
 
@@ -37,7 +38,7 @@ public class StocksController {
     }
 
     @PostMapping("add")
-    public ResponseEntity<Stock> addStock(@RequestBody Stock stock) {
+    public ResponseEntity<Stock> addStock(@Valid @RequestBody Stock stock) {
         Stock savedStock = stocksService.addStock(stock);
         URI location =  MvcUriComponentsBuilder
                 .fromMethodCall(on(StocksController.class).getStock(savedStock.getId()))
