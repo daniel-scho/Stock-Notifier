@@ -1,8 +1,17 @@
 package com.daniel.stocknotifier.controller;
 
 import com.daniel.stocknotifier.entity.User;
+import com.daniel.stocknotifier.error.ResourceNotFoundException;
 import com.daniel.stocknotifier.services.UsersService;
+import jakarta.validation.Valid;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
+
+import java.net.URI;
+import java.util.List;
+
+import static org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder.on;
 
 @RestController
 @RequestMapping("/api/v1/users")
@@ -15,27 +24,37 @@ public class UsersController {
     }
 
     @GetMapping("/{userId}")
-    public String getUser(@PathVariable Integer userId) {
-        return usersService.getUser(userId);
+    public ResponseEntity<User> getUser(@PathVariable Integer userId) {
+        User user = usersService.getUser(userId)
+                .orElseThrow(() -> new ResourceNotFoundException("User was not found with id " + userId));
+        return ResponseEntity.ok(user);
     }
 
     @GetMapping("/all")
-    public String getAllUsers() {
-        return usersService.getAllUsers();
+    public ResponseEntity<List<User>> getAllUsers() {
+        List<User> stocks = usersService.getAllUsers();
+        return ResponseEntity.ok(stocks);
     }
 
     @PostMapping("/add")
-    public String addUser(@RequestBody User user) {
-        return usersService.addUser(user);
+    public ResponseEntity<User> addUser(@Valid @RequestBody User user) {
+        User savedUser = usersService.addUser(user);
+        URI location =  MvcUriComponentsBuilder
+                .fromMethodCall(on(UsersController.class).getUser(savedUser.getId()))
+                .build()
+                .toUri();
+        return ResponseEntity.created(location).body(savedUser);
     }
 
     @PutMapping("/{userId}")
-    public String updateUser(@PathVariable("userId") Integer id, @RequestBody User user) {
-        return usersService.updateUser(id, user);
+    public ResponseEntity<User> updateUser(@PathVariable("userId") Integer id, @RequestBody User user) {
+        User updatedUser = usersService.updateUser(id, user);
+        return ResponseEntity.ok(updatedUser);
     }
 
     @DeleteMapping("/{userId}")
-    public String deleteUser(@PathVariable("userId") Integer userId) {
-        return usersService.deleteUser(userId);
+    public ResponseEntity<User> deleteUser(@PathVariable("userId") Integer userId) {
+        User deletedUser = usersService.deleteUser(userId);
+        return ResponseEntity.ok(deletedUser);
     }
 }

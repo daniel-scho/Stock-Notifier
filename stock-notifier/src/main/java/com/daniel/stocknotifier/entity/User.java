@@ -1,8 +1,23 @@
 package com.daniel.stocknotifier.entity;
 
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+
+@Entity(name = "app_user")
 public class User {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
+
+    @Column(nullable = false)
+    @NotBlank(message = "Name can not be null")
     private String name;
+
+    @Column(nullable = false)
+    @NotBlank(message = "Phone number can not be null")
+    @Pattern(regexp = "^\\+?[0-9]+$", message = "Invalid phone number")
     private String phoneNumber;
 
     public Integer getId() {
