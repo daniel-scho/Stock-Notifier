@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity(name = "app_user")
 public class User {
 
@@ -19,6 +22,22 @@ public class User {
     @NotBlank(message = "Phone number can not be null")
     @Pattern(regexp = "^\\+?[0-9]+$", message = "Invalid phone number")
     private String phoneNumber;
+
+    @ManyToMany
+    @JoinTable(
+            name= "user_stocks",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "stock_id")
+    )
+    private List<Stock> stocks = new ArrayList<>();
+
+    public List<Stock> getStocks() {
+        return stocks;
+    }
+
+    public void setStocks(List<Stock> stocks) {
+        this.stocks = stocks;
+    }
 
     public Integer getId() {
         return id;

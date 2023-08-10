@@ -1,5 +1,6 @@
 package com.daniel.stocknotifier.services;
 
+import com.daniel.stocknotifier.entity.Stock;
 import com.daniel.stocknotifier.entity.User;
 import com.daniel.stocknotifier.error.ResourceNotFoundException;
 import com.daniel.stocknotifier.repository.UserRepository;
@@ -12,9 +13,12 @@ import java.util.Optional;
 public class UsersService {
 
     private final UserRepository userRepository;
+    private final StocksService stocksService;
 
-    public UsersService(UserRepository userRepository) {
+
+    public UsersService(UserRepository userRepository, StocksService stocksService) {
         this.userRepository = userRepository;
+        this.stocksService = stocksService;
     }
 
     public Optional<User> getUser(Integer userId) {
@@ -45,5 +49,15 @@ public class UsersService {
         userRepository.delete(user);
 
         return user;
+    }
+
+    public User addStockToUser(Integer userId, Stock stock) {
+        return userRepository.findById(userId)
+                .map(user -> {
+                    Stock savedStock = stocksService.findOrSave(stock);
+                    user.getStocks().add(savedStock);
+                    return userRepository.save(user);
+                })
+                .orElseThrow(() -> new ResourceNotFoundException("User not found with id " + userId));
     }
 }

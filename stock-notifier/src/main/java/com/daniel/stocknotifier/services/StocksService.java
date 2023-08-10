@@ -47,6 +47,12 @@ public class StocksService {
         stockRepository.delete(stock);
 
         return stock;
+    }
 
+    public Stock findOrSave(Stock stockDetails) {
+        return stockRepository.findByTicker(stockDetails.getTicker())
+                .orElseGet(() -> {
+                    return addStock(stockDetails);
+                });
     }
 }

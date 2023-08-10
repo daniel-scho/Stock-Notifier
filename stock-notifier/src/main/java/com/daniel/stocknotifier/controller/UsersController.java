@@ -1,5 +1,6 @@
 package com.daniel.stocknotifier.controller;
 
+import com.daniel.stocknotifier.entity.Stock;
 import com.daniel.stocknotifier.entity.User;
 import com.daniel.stocknotifier.error.ResourceNotFoundException;
 import com.daniel.stocknotifier.services.UsersService;
@@ -39,6 +40,16 @@ public class UsersController {
     @PostMapping("/add")
     public ResponseEntity<User> addUser(@Valid @RequestBody User user) {
         User savedUser = usersService.addUser(user);
+        URI location =  MvcUriComponentsBuilder
+                .fromMethodCall(on(UsersController.class).getUser(savedUser.getId()))
+                .build()
+                .toUri();
+        return ResponseEntity.created(location).body(savedUser);
+    }
+
+    @PostMapping("/add/stock/{userId}")
+    public ResponseEntity<User> addUser(@PathVariable("userId") Integer id, @Valid @RequestBody Stock stock) {
+        User savedUser = usersService.addStockToUser(id, stock);
         URI location =  MvcUriComponentsBuilder
                 .fromMethodCall(on(UsersController.class).getUser(savedUser.getId()))
                 .build()

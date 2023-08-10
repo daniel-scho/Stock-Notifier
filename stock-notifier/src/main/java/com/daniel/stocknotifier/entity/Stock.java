@@ -8,7 +8,7 @@ public class Stock {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
-    @Column(unique = true, nullable = false)
+    @Column(nullable = false)
     private String companyName;
     @Column(unique = true, nullable = false)
     @NotBlank(message = "Ticker can not be null")
