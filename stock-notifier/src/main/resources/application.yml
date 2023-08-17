@@ -15,6 +15,10 @@ spring:
         format_sql: true
     show-sql: true
 
+api:
+  alpha-vantage:
+    key: ${AlphaVantageKey}
+
 logging:
   level:
     root: INFO
