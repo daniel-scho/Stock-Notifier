@@ -18,11 +18,7 @@ public class AlphaVantageApiClient {
         this.webClient = webClientBuilder.baseUrl("https://www.alphavantage.co/query?").build();
     }
 
-    @PostConstruct
-    public void init() {
-        this.getNewsSentimentOfTicker("IBM");
-    }
-    public void getNewsSentimentOfTicker(String ticker) {
+    public AlphaVantageSentimentResponse getNewsSentimentOfTicker(String ticker) {
         WebClient.ResponseSpec response = this.webClient.get()
                 .uri(uriBuilder -> uriBuilder
                         .queryParam("function", "NEWS_SENTIMENT")
@@ -35,5 +31,6 @@ public class AlphaVantageApiClient {
         AlphaVantageSentimentResponse responseObject = mappedJson.block();
 
         System.out.println(responseObject.getFeed().get(0).toString());
+        return responseObject;
     }
 }

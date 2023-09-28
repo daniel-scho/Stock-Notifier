@@ -120,4 +120,15 @@ public class FeedItem {
                 ", overall_sentiment_label='" + overall_sentiment_label + '\n' +
                 '}';
     }
+
+    public String formatToMessage() {
+        return  title + '\n' +
+                url + '\n' +
+                time_published + '\n' +
+                authors +
+                summary + '\n' +
+                "Category: " + category_within_source + '\n' +
+                "Overall Sentiment Score=" + overall_sentiment_score + '\n' +
+                "Overall Sentiment Label='" + overall_sentiment_label + '\n';
+    }
 }

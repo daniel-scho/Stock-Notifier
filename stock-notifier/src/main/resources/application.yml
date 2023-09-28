@@ -18,6 +18,8 @@ spring:
 api:
   alpha-vantage:
     key: ${AlphaVantageKey}
+  discord:
+    token: ${DiscordToken}
 
 logging:
   level:
